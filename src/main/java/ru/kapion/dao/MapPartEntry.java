@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 /**
  * @author Aleksandr Kuznetsov (kapion) on 25.06.2018
- * Маррер ResultSet для QueryWrapper
+ * Маррер ResultSet
  */
 public class MapPartEntry implements Mapper<Part> {
     @Override

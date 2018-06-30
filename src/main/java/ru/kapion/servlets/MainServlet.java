@@ -83,6 +83,9 @@ public class MainServlet extends HttpServlet {
                     parts = partService.getPartsByFilter(bean);
                 }
 
+                //сбрасываем настройки сортировки
+                initSort();
+
                 //сохраняем фильтр
                 filter = bean;
             }else if(method.equals(GET) && bean.getSortCellIndex() != null) {
@@ -92,7 +95,7 @@ public class MainServlet extends HttpServlet {
                 if (firstSort || previousThIndex != currentThIndex) {
                     previousThIndex = currentThIndex;
                     firstSort = false;
-                    //при первой сортировке - прямой порядок
+                    //при первой сортировке нового столбца - прямой порядок
                     sortOrderASC = true;
                 }
                 //сортировка имеющейся ранее выборки, без запроса к БД
@@ -135,5 +138,12 @@ public class MainServlet extends HttpServlet {
             }
         }
 
+    }
+
+    //начальные настройки сортировки после каждой новой выборки
+    private void initSort() {
+        sortOrderASC = true;
+        previousThIndex = -1;
+        firstSort = true;
     }
 }

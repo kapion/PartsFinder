@@ -11,7 +11,7 @@ import java.util.Locale;
  */
 public final class DateHelper {
 
-    static final String FORMAT_DATE = "MMM dd, yyyy"; //Jul 25, 2018
+    private static final String FORMAT_DATE = "MMM dd, yyyy"; //Jul 25, 2018
 
     static public Date convertTextToJavaDate(String strDate){
         if(strDate.isEmpty()){

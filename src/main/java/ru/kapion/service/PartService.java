@@ -11,7 +11,7 @@ import java.util.*;
 
 /**
  * @author Aleksandr Kuznetsov (kapion) on 27.06.2018
- * Основной сервлет
+ * Сервисный слой
  */
 public class PartService {
     private Logger LOG = LogManager.getRootLogger();
